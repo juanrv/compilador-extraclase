@@ -1116,7 +1116,7 @@ namespace lectorArchivo.Analizador
         {
             ContinuarAnalisis = false;
             DevolverPuntero();
-            CrearComponenteSimbolo(Lexema, Categoria.LETRA_ET, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
+            CrearComponenteLiteral(Lexema, Categoria.LETRA_ET, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
 
             
         }
@@ -1781,7 +1781,7 @@ namespace lectorArchivo.Analizador
         {
             ContinuarAnalisis = false;
             DevolverPuntero();
-            CrearComponenteSimbolo(Lexema, Categoria.NUMERO_SEIS, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
+            CrearComponenteLiteral(Lexema, Categoria.NUMERO_SEIS, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
 
         }
         private void Estado81()
@@ -1820,7 +1820,7 @@ namespace lectorArchivo.Analizador
         {
             ContinuarAnalisis = false;
             DevolverPuntero();
-            CrearComponenteSimbolo(Lexema, Categoria.IGUAL, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
+            CrearComponenteLiteral(Lexema, Categoria.IGUAL, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
 
            
         }

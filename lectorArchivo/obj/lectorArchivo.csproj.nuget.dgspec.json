@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Emerson Quinchia\\Desktop\\compilador-extraclase\\lectorArchivo\\lectorArchivo.csproj": {}
+    "C:\\Users\\Juan Jose Restrepo\\source\\repos\\compilador-extraclase\\lectorArchivo\\lectorArchivo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Emerson Quinchia\\Desktop\\compilador-extraclase\\lectorArchivo\\lectorArchivo.csproj": {
+    "C:\\Users\\Juan Jose Restrepo\\source\\repos\\compilador-extraclase\\lectorArchivo\\lectorArchivo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emerson Quinchia\\Desktop\\compilador-extraclase\\lectorArchivo\\lectorArchivo.csproj",
+        "projectUniqueName": "C:\\Users\\Juan Jose Restrepo\\source\\repos\\compilador-extraclase\\lectorArchivo\\lectorArchivo.csproj",
         "projectName": "lectorArchivo",
-        "projectPath": "C:\\Users\\Emerson Quinchia\\Desktop\\compilador-extraclase\\lectorArchivo\\lectorArchivo.csproj",
-        "packagesPath": "C:\\Users\\Emerson Quinchia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emerson Quinchia\\Desktop\\compilador-extraclase\\lectorArchivo\\obj\\",
+        "projectPath": "C:\\Users\\Juan Jose Restrepo\\source\\repos\\compilador-extraclase\\lectorArchivo\\lectorArchivo.csproj",
+        "packagesPath": "C:\\Users\\Juan Jose Restrepo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Juan Jose Restrepo\\source\\repos\\compilador-extraclase\\lectorArchivo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Emerson Quinchia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Juan Jose Restrepo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

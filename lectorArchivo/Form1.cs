@@ -92,7 +92,7 @@ namespace lectorArchivo
                 ComponenteLexico componente = analizador.Analizador(true);
                 while (!componente.ObtenerCategoria().Equals(Categoria.FIN_DE_ARCHIVO))
                 {
-                    MessageBox.Show(componente.ToString());
+                 //   MessageBox.Show(componente.ToString());
 
                     componente = analizador.Analizador(true);
 
@@ -270,7 +270,7 @@ namespace lectorArchivo
 
                 while (!componente.ObtenerCategoria().Equals(Categoria.FIN_DE_ARCHIVO))
                 {
-                    MessageBox.Show(componente.ToString());
+                    //MessageBox.Show(componente.ToString());
 
                     componente = analizador.Analizador(opcion);
 
@@ -426,6 +426,7 @@ namespace lectorArchivo
                 cargarInfoConsola.Enabled = false;
                 botonLimpiar.Enabled = false;
                 LatinMorse.Enabled = true;
+                MorseLatin.Enabled = true;
                 botonBuscar.Enabled = false;
                 botonCargarInfo.Enabled = false;
             }
@@ -436,6 +437,7 @@ namespace lectorArchivo
                 cargarInfoConsola.Enabled = false;
                 botonLimpiar.Enabled = false;
                 LatinMorse.Enabled = true;
+                MorseLatin.Enabled = true;
                 botonBuscar.Enabled = false;
                 botonCargarInfo.Enabled = false;
             }
