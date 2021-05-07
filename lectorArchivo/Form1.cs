@@ -16,17 +16,19 @@ using lectorArchivo.Transversal;
 
 namespace lectorArchivo
 {
-    public partial class Form1 : Form
+
+   public partial class Form1 : Form
     {
+        Boolean opcion;
         public Form1()
         {
             InitializeComponent();
 
-           
-            
+
+
         }
 
-        
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -45,7 +47,7 @@ namespace lectorArchivo
         private void botonBuscar_Click(object sender, EventArgs e)
         {
             OpenFileDialog buscar = new OpenFileDialog();
-            if(buscar.ShowDialog() == DialogResult.OK)
+            if (buscar.ShowDialog() == DialogResult.OK)
             {
                 textRuta.Text = buscar.FileName;
             }
@@ -67,14 +69,14 @@ namespace lectorArchivo
 
         private void botonCargarInfo_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void cargarInfoConsola_Click(object sender, EventArgs e)
         {
             String[] lineasEntradas = entradaDatosConsola.Lines;
             String[] lineasSalidas = lineasEntradas;
-            for(int i = 0; i < lineasEntradas.Length;i++)
+            for (int i = 0; i < lineasEntradas.Length; i++)
             {
                 lineasSalidas[i] = i + " -> " + lineasEntradas[i];
             }
@@ -122,7 +124,7 @@ namespace lectorArchivo
                 checkArchivo.Enabled = false;
                 cargarInfoConsola.Enabled = true;
                 botonLimpiar.Enabled = true;
-                
+
             }
             else
             {
@@ -133,12 +135,7 @@ namespace lectorArchivo
             }
 
         }
-        private void checkArchivo_CheckedChanged(object sender, EventArgs e)
-        {
-           
-
-        }
-
+ 
 
         private void botonLimpiar_Click(object sender, EventArgs e)
         {
@@ -166,24 +163,16 @@ namespace lectorArchivo
 
         private void checkArchivo_CheckedChanged_1(object sender, EventArgs e)
         {
-            limpiarCampos();
-
             if (checkArchivo.Checked)
             {
-                textRuta.Enabled = true;
-                botonBuscar.Enabled = true;
-                botonCargarInfo.Enabled = true;
-                botonLimpiar.Enabled = true;
                 checkConsola.Enabled = false;
             }
             else
             {
-                textRuta.Enabled = false;
-                botonBuscar.Enabled = false;
-                botonCargarInfo.Enabled = false;
                 checkConsola.Enabled = true;
-                botonLimpiar.Enabled = false;
             }
+
+           
         }
 
         private void botonBuscar_Click_1(object sender, EventArgs e)
@@ -202,7 +191,7 @@ namespace lectorArchivo
             List<String> lineasEntrada = new List<string>();
 
             String lineaActual;
-            
+
             while ((lineaActual = lector.ReadLine()) != null)
             {
                 lineasEntrada.Add(lineaActual);
@@ -217,15 +206,16 @@ namespace lectorArchivo
             try
             {
                 AnalizadorLexico analizador = new AnalizadorLexico();
-                ComponenteLexico componente = analizador.Analizador(true);
+                ComponenteLexico componente = analizador.Analizador(opcion);
                 while (!componente.ObtenerCategoria().Equals(Categoria.FIN_DE_ARCHIVO))
                 {
-                    MessageBox.Show(componente.ToString());
-                    
-                    componente = analizador.Analizador(true);
-                    
+                    //MessageBox.Show(componente.ToString());
+
+                    componente = analizador.Analizador(opcion);
+
 
                 }
+                LlenarTablas();
                 if (ManejadorErrores.HayErrores())
                 {
                     MessageBox.Show("El proceso de compilacion ha finalizado con errores");
@@ -237,31 +227,25 @@ namespace lectorArchivo
             }
             catch (Exception ex)
             {
+                LlenarTablas();
                 MessageBox.Show(ex.Message);
             }
 
-            
+
         }
 
         private void checkConsola_CheckedChanged_1(object sender, EventArgs e)
         {
-            limpiarCampos();
-
             if (checkConsola.Checked)
             {
-                entradaDatosConsola.Enabled = true;
                 checkArchivo.Enabled = false;
-                cargarInfoConsola.Enabled = true;
-                botonLimpiar.Enabled = true;
-
             }
             else
             {
-                entradaDatosConsola.Enabled = false;
                 checkArchivo.Enabled = true;
-                cargarInfoConsola.Enabled = false;
-                botonLimpiar.Enabled = false;
             }
+
+         
         }
 
         private void botonLimpiar_Click_1(object sender, EventArgs e)
@@ -282,18 +266,18 @@ namespace lectorArchivo
             try
             {
                 AnalizadorLexico analizador = new AnalizadorLexico();
-                ComponenteLexico componente = analizador.Analizador(true);
-               
+                ComponenteLexico componente = analizador.Analizador(opcion);
+
                 while (!componente.ObtenerCategoria().Equals(Categoria.FIN_DE_ARCHIVO))
                 {
-                    //MessageBox.Show(componente.ToString());
+                    MessageBox.Show(componente.ToString());
 
-                    componente = analizador.Analizador(true);
-                   
+                    componente = analizador.Analizador(opcion);
+
 
                 }
                 LlenarTablas();
-                
+
                 if (ManejadorErrores.HayErrores())
                 {
                     MessageBox.Show("El proceso de compilacion ha finalizado con errores");
@@ -309,12 +293,12 @@ namespace lectorArchivo
                 MessageBox.Show(ex.Message);
             }
 
-            
+
         }
         private void LlenarTablas()
         {
             List<ComponenteLexico> listaSimbolo = TablaSimbolos.ObtenerSimbolos();
-            for(int i =0; i<listaSimbolo.Count; i++)
+            for (int i = 0; i < listaSimbolo.Count; i++)
             {
                 dataSimbolos.Rows.Add(listaSimbolo[i].ObtenerLexema(), listaSimbolo[i].ObtenerCategoria(), listaSimbolo[i].ObtenerNumeroLinea(), listaSimbolo[i].ObetenerPosicionInicial(), listaSimbolo[i].ObtenerPosicionFinal());
 
@@ -345,7 +329,7 @@ namespace lectorArchivo
                     listaErrores[i].ObtenerFalla(), listaErrores[i].ObtenerCausa(), listaErrores[i].ObtenerSolucion());
 
             }
-            
+
             listaErrores = ManejadorErrores.ObtenerErroresSintatacticos();
             for (int i = 0; i < listaErrores.Count; i++)
             {
@@ -367,27 +351,96 @@ namespace lectorArchivo
         {
             limpiarCampos();
 
-            if (checkArchivo.Checked && MorseLatin.Checked)
+            if (MorseLatin.Checked && checkConsola.Checked)
             {
+                opcion = true;
+                entradaDatosConsola.Enabled = true;
+                checkArchivo.Enabled = false;
+                cargarInfoConsola.Enabled = true;
+                botonLimpiar.Enabled = true;
+                LatinMorse.Enabled = false;
+                checkConsola.Enabled = false;
+            }
+            else if (MorseLatin.Checked && checkArchivo.Checked)
+            {
+                opcion = true;
                 textRuta.Enabled = true;
                 botonBuscar.Enabled = true;
                 botonCargarInfo.Enabled = true;
                 botonLimpiar.Enabled = true;
                 checkConsola.Enabled = false;
+                LatinMorse.Enabled = false;
+                checkArchivo.Enabled = false;
             }
-            else
+            else if(!MorseLatin.Checked && checkArchivo.Checked)
             {
-                textRuta.Enabled = false;
+                entradaDatosConsola.Enabled = false;
+                checkArchivo.Enabled = true;
+                cargarInfoConsola.Enabled = false;
+                botonLimpiar.Enabled = false;
+                LatinMorse.Enabled = true;
                 botonBuscar.Enabled = false;
                 botonCargarInfo.Enabled = false;
+            }
+            else if (!MorseLatin.Checked && checkConsola.Checked)
+            {
+                entradaDatosConsola.Enabled = false;
                 checkConsola.Enabled = true;
+                cargarInfoConsola.Enabled = false;
                 botonLimpiar.Enabled = false;
+                LatinMorse.Enabled = true;
+                botonBuscar.Enabled = false;
+                botonCargarInfo.Enabled = false;
             }
         }
 
         private void LatinMorse_CheckedChanged(object sender, EventArgs e)
         {
+            limpiarCampos();
+
+            if (LatinMorse.Checked && checkConsola.Checked)
+            {
+                opcion = false;
+                entradaDatosConsola.Enabled = true;
+                checkArchivo.Enabled = false;
+                cargarInfoConsola.Enabled = true;
+                botonLimpiar.Enabled = true;
+                MorseLatin.Enabled = false;
+                checkConsola.Enabled = false;
+            }
+            else if (LatinMorse.Checked && checkArchivo.Checked)
+            {
+                opcion = false;
+                textRuta.Enabled = true;
+                botonBuscar.Enabled = true;
+                botonCargarInfo.Enabled = true;
+                botonLimpiar.Enabled = true;
+                checkConsola.Enabled = false;
+                MorseLatin.Enabled = false;
+                checkArchivo.Enabled = false;
+            }
+            else if (!LatinMorse.Checked && checkArchivo.Checked)
+            {
+                entradaDatosConsola.Enabled = false;
+                checkArchivo.Enabled = true;
+                cargarInfoConsola.Enabled = false;
+                botonLimpiar.Enabled = false;
+                LatinMorse.Enabled = true;
+                botonBuscar.Enabled = false;
+                botonCargarInfo.Enabled = false;
+            }
+            else if (!LatinMorse.Checked && checkConsola.Checked)
+            {
+                entradaDatosConsola.Enabled = false;
+                checkConsola.Enabled = true;
+                cargarInfoConsola.Enabled = false;
+                botonLimpiar.Enabled = false;
+                LatinMorse.Enabled = true;
+                botonBuscar.Enabled = false;
+                botonCargarInfo.Enabled = false;
+            }
 
         }
+    
     }
 }

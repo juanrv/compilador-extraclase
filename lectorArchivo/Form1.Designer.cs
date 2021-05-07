@@ -31,6 +31,8 @@ namespace lectorArchivo
         {
             this.tabIngreso = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.MorseLatin = new System.Windows.Forms.CheckBox();
+            this.LatinMorse = new System.Windows.Forms.CheckBox();
             this.botonLimpiar = new System.Windows.Forms.Button();
             this.cargarInfoConsola = new System.Windows.Forms.Button();
             this.botonCargarInfo = new System.Windows.Forms.Button();
@@ -104,8 +106,6 @@ namespace lectorArchivo
             this.dataGridViewTextBoxColumn34 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn35 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn36 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.LatinMorse = new System.Windows.Forms.CheckBox();
-            this.MorseLatin = new System.Windows.Forms.CheckBox();
             this.tabIngreso.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -162,6 +162,28 @@ namespace lectorArchivo
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Ingreso";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // MorseLatin
+            // 
+            this.MorseLatin.AutoSize = true;
+            this.MorseLatin.Location = new System.Drawing.Point(901, 206);
+            this.MorseLatin.Name = "MorseLatin";
+            this.MorseLatin.Size = new System.Drawing.Size(97, 19);
+            this.MorseLatin.TabIndex = 23;
+            this.MorseLatin.Text = "Morse a Latin";
+            this.MorseLatin.UseVisualStyleBackColor = true;
+            this.MorseLatin.CheckedChanged += new System.EventHandler(this.MorseLatin_CheckedChanged);
+            // 
+            // LatinMorse
+            // 
+            this.LatinMorse.AutoSize = true;
+            this.LatinMorse.Location = new System.Drawing.Point(901, 130);
+            this.LatinMorse.Name = "LatinMorse";
+            this.LatinMorse.Size = new System.Drawing.Size(97, 19);
+            this.LatinMorse.TabIndex = 22;
+            this.LatinMorse.Text = "Latin a Morse";
+            this.LatinMorse.UseVisualStyleBackColor = true;
+            this.LatinMorse.CheckedChanged += new System.EventHandler(this.LatinMorse_CheckedChanged);
             // 
             // botonLimpiar
             // 
@@ -838,33 +860,11 @@ namespace lectorArchivo
             this.dataGridViewTextBoxColumn36.Name = "dataGridViewTextBoxColumn36";
             this.dataGridViewTextBoxColumn36.ReadOnly = true;
             // 
-            // LatinMorse
-            // 
-            this.LatinMorse.AutoSize = true;
-            this.LatinMorse.Location = new System.Drawing.Point(901, 130);
-            this.LatinMorse.Name = "LatinMorse";
-            this.LatinMorse.Size = new System.Drawing.Size(97, 19);
-            this.LatinMorse.TabIndex = 22;
-            this.LatinMorse.Text = "Latin a Morse";
-            this.LatinMorse.UseVisualStyleBackColor = true;
-            this.LatinMorse.CheckedChanged += new System.EventHandler(this.LatinMorse_CheckedChanged);
-            // 
-            // MorseLatin
-            // 
-            this.MorseLatin.AutoSize = true;
-            this.MorseLatin.Location = new System.Drawing.Point(901, 206);
-            this.MorseLatin.Name = "MorseLatin";
-            this.MorseLatin.Size = new System.Drawing.Size(97, 19);
-            this.MorseLatin.TabIndex = 23;
-            this.MorseLatin.Text = "Morse a Latin";
-            this.MorseLatin.UseVisualStyleBackColor = true;
-            this.MorseLatin.CheckedChanged += new System.EventHandler(this.MorseLatin_CheckedChanged);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1387, 791);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.tabIngreso);
             this.Name = "Form1";
             this.Text = "Form1";
