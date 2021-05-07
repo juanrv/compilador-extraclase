@@ -36,3 +36,10 @@ C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\
 C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\obj\Debug\netcoreapp3.1\lectorArchivo.csproj.CoreCompileInputs.cache
 C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\obj\Debug\netcoreapp3.1\lectorArchivo.dll
 C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\obj\Debug\netcoreapp3.1\lectorArchivo.pdb
+C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\bin\Debug\netcoreapp3.1\lectorArchivo.exe
+C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\bin\Debug\netcoreapp3.1\lectorArchivo.deps.json
+C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\bin\Debug\netcoreapp3.1\lectorArchivo.runtimeconfig.json
+C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\bin\Debug\netcoreapp3.1\lectorArchivo.runtimeconfig.dev.json
+C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\bin\Debug\netcoreapp3.1\lectorArchivo.dll
+C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\bin\Debug\netcoreapp3.1\lectorArchivo.pdb
+C:\Users\Juan Jose Restrepo\source\repos\lectorArchivo extraclase\lectorArchivo\obj\Debug\netcoreapp3.1\lectorArchivo.genruntimeconfig.cache

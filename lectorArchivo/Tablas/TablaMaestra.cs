@@ -16,7 +16,7 @@ namespace lectorArchivo.Tablas
         {
             if (Componente != null)
             {
-                Componente = TablaPalabraReservadas.ComprobarPalabraReservada(Componente);
+                //Componente = TablaPalabraReservadas.ComprobarPalabraReservada(Componente);
 
                 switch (Componente.ObtenerTipo())
                 {

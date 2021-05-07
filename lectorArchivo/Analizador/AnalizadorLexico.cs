@@ -16,7 +16,6 @@ namespace lectorArchivo.Analizador
         private int EstadoActual;
         private bool ContinuarAnalisis = true;
         private ComponenteLexico Componente;
-        private TipoComponente TipoComponente;
 
 
         public AnalizadorLexico()
@@ -37,6 +36,10 @@ namespace lectorArchivo.Analizador
                     if (EstadoActual == 1)
                     {
                         Estado1();
+                    }
+                    else if (EstadoActual == 0)
+                    {
+                        Estado0();
                     }
                     else if (EstadoActual == 2)
                     {
@@ -564,7 +567,7 @@ namespace lectorArchivo.Analizador
                     }
 
                 }
-                return TablaMaestra.SincronizarTabla(Componente);
+                
 
 
             }
@@ -593,253 +596,14 @@ namespace lectorArchivo.Analizador
                     {
                         Estado139();
                     }
-                    else if (EstadoActual == 140)
-                    {
-                        Estado140();
-                    }
-                    else if (EstadoActual == 141)
-                    {
-                        Estado141();
-                    }
-                    else if (EstadoActual == 142)
-                    {
-                        Estado142();
-                    }
-                    else if (EstadoActual == 143)
-                    {
-                        Estado143();
-                    }
-                    else if (EstadoActual == 144)
-                    {
-                        Estado144();
-                    }
-                    else if (EstadoActual == 145)
-                    {
-                        Estado145();
-                    }
-                    else if (EstadoActual == 146)
-                    {
-                        Estado146();
-                    }
-                    else if (EstadoActual == 147)
-                    {
-                        Estado147();
-                    }
-                    else if (EstadoActual == 148)
-                    {
-                        Estado148();
-                    }
-                    else if (EstadoActual == 149)
-                    {
-                        Estado149();
-                    }
-                    else if (EstadoActual == 150)
-                    {
-                        Estado150();
-                    }
-                    else if (EstadoActual == 151)
-                    {
-                        Estado151();
-                    }
-                    else if (EstadoActual == 152)
-                    {
-                        Estado152();
-                    }
-                    else if (EstadoActual == 153)
-                    {
-                        Estado153();
-                    }
-                    else if (EstadoActual == 154)
-                    {
-                        Estado154();
-                    }
-                    else if (EstadoActual == 155)
-                    {
-                        Estado155();
-                    }
-                    else if (EstadoActual == 156)
-                    {
-                        Estado156();
-                    }
-                    else if (EstadoActual == 157)
-                    {
-                        Estado157();
-                    }
-                    else if (EstadoActual == 158)
-                    {
-                        Estado158();
-                    }
-                    else if (EstadoActual == 159)
-                    {
-                        Estado159();
-                    }
-                    else if (EstadoActual == 160)
-                    {
-                        Estado160();
-                    }
-                    else if (EstadoActual == 161)
-                    {
-                        Estado161();
-                    }
-                    else if (EstadoActual == 162)
-                    {
-                        Estado162();
-                    }
-                    else if (EstadoActual == 163)
-                    {
-                        Estado163();
-                    }
-                    else if (EstadoActual == 164)
-                    {
-                        Estado164();
-                    }
-                    else if (EstadoActual == 165)
-                    {
-                        Estado165();
-                    }
-                    else if (EstadoActual == 166)
-                    {
-                        Estado166();
-                    }
-                    else if (EstadoActual == 167)
-                    {
-                        Estado167();
-                    }
-                    else if (EstadoActual == 168)
-                    {
-                        Estado168();
-                    }
-                    else if (EstadoActual == 169)
-                    {
-                        Estado169();
-                    }
-                    else if (EstadoActual == 170)
-                    {
-                        Estado170();
-                    }
-                    else if (EstadoActual == 171)
-                    {
-                        Estado171();
-                    }
-                    else if (EstadoActual == 172)
-                    {
-                        Estado172();
-                    }
-                    else if (EstadoActual == 173)
-                    {
-                        Estado173();
-                    }
-                    else if (EstadoActual == 174)
-                    {
-                        Estado174();
-                    }
-                    else if (EstadoActual == 175)
-                    {
-                        Estado175();
-                    }
-                    else if (EstadoActual == 176)
-                    {
-                        Estado176();
-                    }
-                    else if (EstadoActual == 177)
-                    {
-                        Estado177();
-                    }
-                    else if (EstadoActual == 178)
-                    {
-                        Estado178();
-                    }
-                    else if (EstadoActual == 179)
-                    {
-                        Estado179();
-                    }
-                    else if (EstadoActual == 180)
-                    {
-                        Estado180();
-                    }
-                    else if (EstadoActual == 181)
-                    {
-                        Estado184();
-                    }
-                    else if (EstadoActual == 182)
-                    {
-                        Estado182();
-                    }
-                    else if (EstadoActual == 183)
-                    {
-                        Estado183();
-                    }
-                    else if (EstadoActual == 184)
-                    {
-                        Estado184();
-                    }
-                    else if (EstadoActual == 185)
-                    {
-                        Estado185();
-                    }
-                    else if (EstadoActual == 186)
-                    {
-                        Estado186();
-                    }
-                    else if (EstadoActual == 187)
-                    {
-                        Estado187();
-                    }
-                    else if (EstadoActual == 188)
-                    {
-                        Estado188();
-                    }
-                    else if (EstadoActual == 189)
-                    {
-                        Estado189();
-                    }
-                    else if (EstadoActual == 190)
-                    {
-                        Estado190();
-                    }
-                    else if (EstadoActual == 191)
-                    {
-                        Estado191();
-                    }
-                    else if (EstadoActual == 192)
-                    {
-                        Estado192();
-                    }
-                    else if (EstadoActual == 193)
-                    {
-                        Estado193();
-                    }
-                    else if (EstadoActual == 194)
-                    {
-                        Estado194();
-                    }
-                    else if (EstadoActual == 195)
-                    {
-                        Estado195();
-                    }
-                    else if (EstadoActual == 196)
-                    {
-                        Estado196();
-                    }
-                    else if (EstadoActual == 197)
-                    {
-                        Estado197();
-                    }
-                    else if (EstadoActual == 198)
-                    {
-                        Estado198();
-                    }
-                    else if (EstadoActual == 199)
-                    {
-                        Estado199();
-                    }
+                    
                 }
-                return TablaMaestra.SincronizarTabla(Componente);
+               
 
 
             }
 
-
+            return TablaMaestra.SincronizarTabla(Componente);
 
         }
 
@@ -878,10 +642,11 @@ namespace lectorArchivo.Analizador
             else if (Puntero > LineaActual.ObtenerContenido().Length)
             {
                 CaracterActual = "@FL@";
+                AdelantarPuntero();
             }
             else
             {
-                CaracterActual = LineaActual.ObtenerContenido().Substring(Puntero, 1);
+                CaracterActual = LineaActual.ObtenerContenido().Substring(Puntero - 1 , 1);
                 AdelantarPuntero();
             }
         }
@@ -889,13 +654,13 @@ namespace lectorArchivo.Analizador
         private void FormarComponenteMorse()
         {
             Lexema = Lexema + CaracterActual;
-            EstadoActual = 1;
+            
         }
 
         private void FormarComponenteLatin()
         {
             Lexema = Lexema + CaracterActual;
-            EstadoActual = 135;
+            
 
         }
 
@@ -918,6 +683,7 @@ namespace lectorArchivo.Analizador
             CaracterActual = "";
             ContinuarAnalisis = true;
             ResetearLexema();
+            Componente = null;
         }
 
         private void resetearLatin()
@@ -926,6 +692,7 @@ namespace lectorArchivo.Analizador
             CaracterActual = "";
             ContinuarAnalisis = true;
             ResetearLexema();
+            Componente = null;
         }
 
 
@@ -967,12 +734,24 @@ namespace lectorArchivo.Analizador
         {
             return " ".Equals(CaracterActual);
         }
+        private void Estado0()
+        {
+            ContinuarAnalisis = false;
+            String Causa = "Se esperaba un caracter valido dentro del lenguaje y se recibio: " + CaracterActual;
+            String falla = "Caracter no reconocido por el lenguaje";
+            String Solucion = "Asegurarse que el caracter sea valido";
+            Error Error = Error.CrearErrorLexico(Lexema, Categoria.ERROR, NumeroDeLineaActual, Puntero
+                 - Lexema.Length, Puntero - 1, falla, Causa, Solucion);
+            ManejadorErrores.Reportar(Error);
+            throw new Exception("Se ha presentado un error de tipo stopper dentro del proceso de compilacion. Por favor revise la consola de errores...");
+        }
 
 
         private void Estado1()
         {
-            DevorarEspaciosBlanco();
+            
             LeerSiguienteCaracter();
+            DevorarEspaciosBlanco();
             if (EsPunto())
             {
                 EstadoActual = 4;
@@ -996,15 +775,17 @@ namespace lectorArchivo.Analizador
             {
                 EstadoActual = 3;
             }
+            
             else
             {
-                EstadoActual = 134;
+                FormarComponenteMorse();
+                EstadoActual = 0;
             }
         }
         private void Estado2()
         {
             CargarNuevaLineaMorse();
-            ContinuarAnalisis = false;
+            
         }
         private void Estado3()
         {
@@ -1447,7 +1228,7 @@ namespace lectorArchivo.Analizador
         private void Estado38()
         {
             ContinuarAnalisis = false;
-            CrearComponenteSimbolo(Lexema, Categoria.LETRA_I, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
+            CrearComponenteSimbolo(Lexema, Categoria.LETRA_I, NumeroDeLineaActual, Puntero - Lexema.Length-1, Puntero - 2);
 
             DevolverPuntero();
         }
@@ -2620,8 +2401,6 @@ namespace lectorArchivo.Analizador
             CrearComponenteDummy("1", Error.ObtenerCategoria(), Error.ObtenerNumeroLinea(), Error.ObetenerPosicionInicial(), Error.ObetenerPosicionInicial());
         }
 
-
-
         private void Estado135()
         {
             LeerSiguienteCaracter();
@@ -2636,251 +2415,254 @@ namespace lectorArchivo.Analizador
             }
             else if ("A".Equals(CaracterActual) || "a".Equals(CaracterActual))
             {
-                EstadoActual = 139;
+                EstadoActual = 138;
+                FormarComponenteLatin();
+                
             }
             else if ("B".Equals(CaracterActual) || "b".Equals(CaracterActual))
             {
-                EstadoActual = 140;
+                EstadoActual = 138;
+                FormarComponenteLatin();
             }
             else if ("C".Equals(CaracterActual) || "c".Equals(CaracterActual))
             {
-                EstadoActual = 141;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("D".Equals(CaracterActual) || "d".Equals(CaracterActual))
             {
-                EstadoActual = 142;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("E".Equals(CaracterActual) || "e".Equals(CaracterActual))
             {
-                EstadoActual = 143;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("F".Equals(CaracterActual) || "f".Equals(CaracterActual))
             {
-                EstadoActual = 144;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("G".Equals(CaracterActual) || "g".Equals(CaracterActual))
             {
-                EstadoActual = 145;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("H".Equals(CaracterActual) || "h".Equals(CaracterActual))
             {
-                EstadoActual = 146;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("I".Equals(CaracterActual) || "i".Equals(CaracterActual))
             {
-                EstadoActual = 147;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("J".Equals(CaracterActual) || "j".Equals(CaracterActual))
             {
-                EstadoActual = 148;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("K".Equals(CaracterActual) || "k".Equals(CaracterActual))
             {
-                EstadoActual = 149;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("L".Equals(CaracterActual) || "l".Equals(CaracterActual))
             {
-                EstadoActual = 150;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("M".Equals(CaracterActual) || "m".Equals(CaracterActual))
             {
-                EstadoActual = 151;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("N".Equals(CaracterActual) || "n".Equals(CaracterActual))
             {
-                EstadoActual = 152;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("O".Equals(CaracterActual) || "o".Equals(CaracterActual))
             {
-                EstadoActual = 153;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("P".Equals(CaracterActual) || "p".Equals(CaracterActual))
             {
-                EstadoActual = 154;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("Q".Equals(CaracterActual) || "q".Equals(CaracterActual))
             {
-                EstadoActual = 155;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("R".Equals(CaracterActual) || "r".Equals(CaracterActual))
             {
-                EstadoActual = 156;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("S".Equals(CaracterActual) || "s".Equals(CaracterActual))
             {
-                EstadoActual = 157;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("T".Equals(CaracterActual) || "t".Equals(CaracterActual))
             {
-                EstadoActual = 158;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("U".Equals(CaracterActual) || "u".Equals(CaracterActual))
             {
-                EstadoActual = 159;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("V".Equals(CaracterActual) || "v".Equals(CaracterActual))
             {
-                EstadoActual = 160;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("W".Equals(CaracterActual) || "w".Equals(CaracterActual))
             {
-                EstadoActual = 161;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("X".Equals(CaracterActual) || "x".Equals(CaracterActual))
             {
-                EstadoActual = 162;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("Y".Equals(CaracterActual) || "y".Equals(CaracterActual))
             {
-                EstadoActual = 163;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("Z".Equals(CaracterActual) || "z".Equals(CaracterActual))
             {
-                EstadoActual = 164;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if (EsEspacio())
             {
-                EstadoActual = 165;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("Á".Equals(CaracterActual) || "á".Equals(CaracterActual))
             {
-                EstadoActual = 166;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("É".Equals(CaracterActual) || "é".Equals(CaracterActual))
             {
-                EstadoActual = 167;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("Ó".Equals(CaracterActual) || "ó".Equals(CaracterActual))
             {
-                EstadoActual = 168;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("Ñ".Equals(CaracterActual) || "ñ".Equals(CaracterActual))
             {
-                EstadoActual = 169;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("0".Equals(CaracterActual))
             {
-                EstadoActual = 170;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("1".Equals(CaracterActual))
             {
-                EstadoActual = 171;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("2".Equals(CaracterActual))
             {
-                EstadoActual = 172;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("3".Equals(CaracterActual))
             {
-                EstadoActual = 173;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("4".Equals(CaracterActual))
             {
-                EstadoActual = 174;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("5".Equals(CaracterActual))
             {
-                EstadoActual = 175;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("6".Equals(CaracterActual))
             {
-                EstadoActual = 176;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("7".Equals(CaracterActual))
             {
-                EstadoActual = 177;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("8".Equals(CaracterActual))
             {
-                EstadoActual = 178;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("9".Equals(CaracterActual))
             {
-                EstadoActual = 179;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if (".".Equals(CaracterActual))
             {
-                EstadoActual = 180;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if (",".Equals(CaracterActual))
             {
-                EstadoActual = 181;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("¿".Equals(CaracterActual))
             {
-                EstadoActual = 182;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("?".Equals(CaracterActual))
             {
-                EstadoActual = 183;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("'".Equals(CaracterActual))
             {
-                EstadoActual = 184;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("¡".Equals(CaracterActual))
             {
-                EstadoActual = 185;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("!".Equals(CaracterActual))
             {
-                EstadoActual = 186;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("/".Equals(CaracterActual))
             {
-                EstadoActual = 187;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("(".Equals(CaracterActual))
             {
-                EstadoActual = 188;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if (")".Equals(CaracterActual))
             {
-                EstadoActual = 189;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("&".Equals(CaracterActual))
             {
-                EstadoActual = 190;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("$".Equals(CaracterActual))
             {
-                EstadoActual = 191;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("+".Equals(CaracterActual))
             {
-                EstadoActual = 192;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("-".Equals(CaracterActual))
             {
-                EstadoActual = 193;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if (":".Equals(CaracterActual))
             {
-                EstadoActual = 194;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if (";".Equals(CaracterActual))
             {
-                EstadoActual = 195;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("=".Equals(CaracterActual))
             {
-                EstadoActual = 196;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("_".Equals(CaracterActual))
             {
-                EstadoActual = 197;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("\"".Equals(CaracterActual))
             {
-                EstadoActual = 198;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else if ("@".Equals(CaracterActual))
             {
-                EstadoActual = 199;
+                EstadoActual = 138; FormarComponenteLatin();
             }
             else
             {
-                EstadoActual = 138;
+                EstadoActual = 139;
             }
         }
 
@@ -2893,447 +2675,30 @@ namespace lectorArchivo.Analizador
         private void Estado137()
         {
             CargarNuevaLineaLatin();
-            ContinuarAnalisis = false;
+            
         }
 
         private void Estado138()
         {
-            DevolverPuntero();
             ContinuarAnalisis = false;
-            String Causa = "Hubo un error en la cadena";
-            String falla = "Latin no valido";
-            String Solucion = "#";
-            Error Error = Error.CrearErrorLexico(Lexema, Categoria.ERROR, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1, falla, Causa, Solucion);
-            ManejadorErrores.Reportar(Error);
-            CrearComponenteDummy("1", Error.ObtenerCategoria(), Error.ObtenerNumeroLinea(), Error.ObetenerPosicionInicial(), Error.ObetenerPosicionInicial());
+            CrearComponenteLiteral(Lexema, Categoria.PLACE_HOLDER, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
+            Componente = TablaPalabraReservadas.ComprobarPalabraReservada(Componente);
+            
 
         }
         private void Estado139()
         {
             ContinuarAnalisis = false;
-
-            int posicionInicial = Puntero - Lexema.Length;
-            int posicionFinal = Puntero - 1;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, posicionInicial, posicionFinal);
-            DevolverPuntero();
-        }
-        private void Estado140()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado141()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado142()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado143()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado144()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado145()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado146()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado147()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado148()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado149()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado150()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado151()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado152()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado153()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado154()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado155()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado156()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado157()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado158()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado159()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado160()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado161()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado162()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado163()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado164()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado165()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado166()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.TILDE_A_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado167()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.TILDE_E_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado168()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.TILDE_O_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado169()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.LETRA_ENYE_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado170()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorse(Lexema, Categoria.NUMERO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado171()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.NUMERO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado172()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.NUMERO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado173()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.NUMERO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado174()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.NUMERO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado175()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.NUMERO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado176()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.NUMERO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado177()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.NUMERO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado178()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.NUMERO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado179()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.NUMERO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado180()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.PUNTO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado181()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.COMA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado182()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.PREGUNTA_ABRE_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado183()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.PREGUNTA_CIERRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado184()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.COMILLA_SIMPLE_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado185()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.ADMIRACION_ABRE_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado186()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.ADMIRACION_CIERRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado187()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.BARRA_INCLINADA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado188()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.PARENTESIS_ABRE_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado189()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.PARENTESIS_CIERRA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado190()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.ET_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado191()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.SIGNO_PESOS_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado192()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.MAS_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado193()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.GUION_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado194()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.DOS_PUNTOS_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado195()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.PUNTO_Y_COMA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-
-            DevolverPuntero();
-        }
-        private void Estado196()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.IGUAL_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-            DevolverPuntero();
-        }
-        private void Estado197()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.GUION_BAJO_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-            DevolverPuntero();
-        }
-        private void Estado198()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.BARRA_INCLINADA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-            DevolverPuntero();
-        }
-        private void Estado199()
-        {
-            ContinuarAnalisis = false;
-            CrearComponenteMorseLiteral(Lexema, Categoria.ARROBA_MORSE, NumeroDeLineaActual, Puntero - Lexema.Length, Puntero - 1);
-            DevolverPuntero();
+            String Causa = "Se esperaba un caracter valido dentro del lenguaje y se recibio: " + CaracterActual;
+            String falla = "Caracter no reconocido por el lenguaje";
+            String Solucion = "Asegurarse que el caracter sea valido";
+            Error Error = Error.CrearErrorLexico(Lexema, Categoria.ERROR, NumeroDeLineaActual, Puntero
+                 - Lexema.Length, Puntero - 1, falla, Causa, Solucion);
+            ManejadorErrores.Reportar(Error);
+            throw new Exception("Se ha presentado un error de tipo stopper dentro del proceso de compilacion. Por favor revise la consola de errores...");
 
         }
+
 
         private void CrearComponenteSimbolo(String Lexema, Categoria categoria, int NumeroLinea, int PosicionInicial, int PosicionFinal)
         {

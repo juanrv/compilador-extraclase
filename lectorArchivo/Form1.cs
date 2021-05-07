@@ -87,12 +87,12 @@ namespace lectorArchivo
             try
             {
                 AnalizadorLexico analizador = new AnalizadorLexico();
-                ComponenteLexico componente = analizador.Analizar();
+                ComponenteLexico componente = analizador.Analizador(true);
                 while (!componente.ObtenerCategoria().Equals(Categoria.FIN_DE_ARCHIVO))
                 {
                     MessageBox.Show(componente.ToString());
 
-                    componente = analizador.Analizar();
+                    componente = analizador.Analizador(true);
 
                 }
                 if (ManejadorErrores.HayErrores())
@@ -217,12 +217,12 @@ namespace lectorArchivo
             try
             {
                 AnalizadorLexico analizador = new AnalizadorLexico();
-                ComponenteLexico componente = analizador.Analizar();
+                ComponenteLexico componente = analizador.Analizador(true);
                 while (!componente.ObtenerCategoria().Equals(Categoria.FIN_DE_ARCHIVO))
                 {
                     MessageBox.Show(componente.ToString());
                     
-                    componente = analizador.Analizar();
+                    componente = analizador.Analizador(true);
                     
 
                 }
@@ -282,13 +282,13 @@ namespace lectorArchivo
             try
             {
                 AnalizadorLexico analizador = new AnalizadorLexico();
-                ComponenteLexico componente = analizador.Analizar();
+                ComponenteLexico componente = analizador.Analizador(true);
                
                 while (!componente.ObtenerCategoria().Equals(Categoria.FIN_DE_ARCHIVO))
                 {
                     //MessageBox.Show(componente.ToString());
 
-                    componente = analizador.Analizar();
+                    componente = analizador.Analizador(true);
                    
 
                 }
@@ -305,6 +305,7 @@ namespace lectorArchivo
             }
             catch (Exception ex)
             {
+                LlenarTablas();
                 MessageBox.Show(ex.Message);
             }
 
@@ -362,7 +363,31 @@ namespace lectorArchivo
 
         }
 
+        private void MorseLatin_CheckedChanged(object sender, EventArgs e)
+        {
+            limpiarCampos();
 
-        
+            if (checkArchivo.Checked && MorseLatin.Checked)
+            {
+                textRuta.Enabled = true;
+                botonBuscar.Enabled = true;
+                botonCargarInfo.Enabled = true;
+                botonLimpiar.Enabled = true;
+                checkConsola.Enabled = false;
+            }
+            else
+            {
+                textRuta.Enabled = false;
+                botonBuscar.Enabled = false;
+                botonCargarInfo.Enabled = false;
+                checkConsola.Enabled = true;
+                botonLimpiar.Enabled = false;
+            }
+        }
+
+        private void LatinMorse_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
