@@ -13,6 +13,7 @@ using lectorArchivo.Analizador;
 using lectorArchivo.GestorErrores;
 using lectorArchivo.Tablas;
 using lectorArchivo.Transversal;
+using lectorArchivo.AnalisisSintactico;
 
 namespace lectorArchivo
 {
@@ -20,6 +21,7 @@ namespace lectorArchivo
    public partial class Form1 : Form
     {
         Boolean opcion;
+        Boolean depurar =false;
         public Form1()
         {
             InitializeComponent();
@@ -218,11 +220,15 @@ namespace lectorArchivo
                 LlenarTablas();
                 if (ManejadorErrores.HayErrores())
                 {
-                    MessageBox.Show("El proceso de compilacion ha finalizado con errores");
+                    MessageBox.Show("Hay problemas de compilacion. Revise la información de los errores encontrados...");
+                }
+                else if (Categoria.FIN_DE_ARCHIVO.Equals(componente.ObtenerCategoria()))
+                {
+                    MessageBox.Show("El programa se encuentra bien escrito");
                 }
                 else
                 {
-                    MessageBox.Show("El proceso de compilacion ha finalizado exitosamente");
+                    MessageBox.Show("Aunque el programa se encuentra bien escrito, faltaron componente por evaluar...");
                 }
             }
             catch (Exception ex)
@@ -265,26 +271,31 @@ namespace lectorArchivo
             }
             try
             {
-                AnalizadorLexico analizador = new AnalizadorLexico();
-                ComponenteLexico componente = analizador.Analizador(opcion);
+                //AnalizadorLexico analizador = new AnalizadorLexico();
+                AnalizadorSintactico AnaSin = new AnalizadorSintactico();
+                ComponenteLexico componente = AnaSin.Analizar(depurar, opcion);
 
-                while (!componente.ObtenerCategoria().Equals(Categoria.FIN_DE_ARCHIVO))
-                {
-                    //MessageBox.Show(componente.ToString());
+                //while (!componente.ObtenerCategoria().Equals(Categoria.FIN_DE_ARCHIVO))
+                //{
+                //    //MessageBox.Show(componente.ToString());
 
-                    componente = analizador.Analizador(opcion);
+                //    componente = analizador.Analizador(opcion);
 
 
-                }
+                //}
                 LlenarTablas();
 
                 if (ManejadorErrores.HayErrores())
                 {
-                    MessageBox.Show("El proceso de compilacion ha finalizado con errores");
+                    MessageBox.Show("Hay problemas de compilacion. Revise la información de los errores encontrados...");
+                }
+                else if (Categoria.FIN_DE_ARCHIVO.Equals(componente.ObtenerCategoria()))
+                {
+                    MessageBox.Show("El programa se encuentra bien escrito");
                 }
                 else
                 {
-                    MessageBox.Show("El proceso de compilacion ha finalizado exitosamente");
+                    MessageBox.Show("Aunque el programa se encuentra bien escrito, faltaron componente por evaluar...");
                 }
             }
             catch (Exception ex)
